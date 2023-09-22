@@ -1,0 +1,35 @@
+body {
+margin: 0;
+}
+
+.header {
+    background-color: black;
+}
+.container {
+    max-width: 75%;
+    margin: auto;
+}
+.main-menu {
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 20px 0;
+
+}
+
+.main-menu a {
+text-decoration: none;
+color: white;
+margin-right: 10px;
+}
+
+main p {
+    text-align: justify;
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 40px 0;
+    margin-top: 2rem;
+    
+}
