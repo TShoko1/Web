@@ -1,10 +1,19 @@
 body {
 margin: 0;
+font-family: 'Roboto', sans-serif;
 }
 
 .header {
     background-color: black;
+    color: white;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
 }
+
+.name {
+text-transform: uppercase;
+}
+
 .container {
     max-width: 75%;
     margin: auto;
@@ -22,14 +31,77 @@ color: white;
 margin-right: 10px;
 }
 
+.main-menu a:hover {
+    transition: color 0.5s;
+    color: rgb(19,182,231);
+    
+}
+
 main p {
     text-align: justify;
+}
+
+.avatar {
+    height: 350px;
+    text-align: center;
+    margin: 3rem 0;
+    background-image: url(../images/background1.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.avatar img {
+    height: 100%;
+}
+
+.btn {
+    text-decoration: none;
+    color: #1214a1;
+    font-weight: bold;
+    border: 2px solid #1214a1;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    transition: color 0.5s, border-color 0.5s;
+    color: rgb(19,182,231);
+    border-color: rgb(19,182,231);
+}
+
+.contact-me-btn {
+color: white;
+border-color: white;
+font-size: 1.2rem;
+display: inline-block;
 }
 
 .footer {
     background-color: black;
     color: white;
     padding: 40px 0;
-    margin-top: 2rem;
-    
+    margin-top: 2rem;   
+}
+
+.text-center {
+    text-align: center;
+}
+
+.py-5 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.w-50 {
+    max-width: 50%;
+}
+
+.my-3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
 }
