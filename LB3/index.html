@@ -1,110 +1,154 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="UTF-8">
-        <title>Веб-разработчик Барателия Т.А.</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"> 
-        <link rel="stylesheet" href="styles/main.css">
-    </head>
-    <body>
-        <header class="header">
-            <div class="container">  
-             <nav class="main-menu">
-             <a href="#about">Обо мне</a>
-             <a href="#skills">Навыки</a>
-             <a href="#technologies">Технологии</a>
-             <a href="feedback.html">Обратная связь</a>
-             <a href="authorization.html">Авторизация</a>
-            </nav>
-            <div class="text-center py-5">
-            <h1 class="name">Барателия Тимур Адгурович</h1>
-            <h2>Веб-разработчик</h2>
-            <p class="w-50 my-3 mx-auto">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                Alias autem reiciendis laudantium, nemo voluptatum possimus 
-                non rem perspiciatis aspernatur, sit reprehenderit nesciunt! Quas illo
-                quasi cumque quibusdam esse assumenda. Suscipit.
-            </p>
-            <a class="btn contact-me-btn" href="mailto:barateliatimura@gmail.com">Написать мне</a>
 
-        </div>
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <title>Сериалы</title>
+</head>
+
+<body> 
+
+    <div class="sidebar">
+        <a href="index.html">Лучшие сериалы</a>
+        <a href="films.html">Фильмы</a>
+        <a href="actors.html">Известные актеры</a>
+        <a href="auth.html">Авторизация</a>
+        <a href="form.html">Форма</a>
         
-        </header>
+    </div>
+    <main class="container d-flex direction-column">
 
-        <main>
-            <div class="container">
-                <section id="about">
-                    <h1>Обо мне</h1>
-
-                    <figure class="avatar">
-                        <img src="images/person.png" alt="person">
-                    </figure>
-
-
-                    <p>
-                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, 
-                        explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur
-                        magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit,
-                        amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam
-                        quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut 
-                        aliquid ex ea commodi consequatur? Quis autem vel eumiure reprehenderit, qui in ea voluptate velit esse
-                    </p>
-                </section>
-
-                <section id="skills">
-                    <h1>Навыки</h1>
-                    <p>
-                        Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                        totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, 
-                        explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, 
-                        qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, 
-                        sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-                        quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum 
-                        iure reprehenderit, qui in ea voluptate velit esse
-                    </p>
-                    <div class="text-right">
-                         <a class="btn" href="skills.html">Подробнее</a>
+        <div class="page-content">
+            <h1 class="events">Сериалы</h1>
+            <div class="events-list">
+                
+                <div class="event">
+                    <div class="product-image">
+                        <img src="images/Game_of_Thrones.jpg" alt="event3">
                     </div>
-                   
-                </section>
-
-          
-            <section id="technologies">
-                <h1>Технологии</h1>
-                <p>
-                    Sed ut perspiciatis, unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt, 
-                    explicabo. Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, 
-                    qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, 
-                    sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam,
-                    quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum 
-                    iure reprehenderit, qui in ea voluptate velit esse
-                </p>
-                <ul>
-                    <li>Python</li>
-                    <li>C++</li>
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Bootstrap</li>
-                </ul>
-                <div class="text-right">
-                         <a class="btn" href="technologies.html">Подробнее</a>
+                    <div class="product-details">
+                        <header>Игра престолов</header>
+                        <p class="information">Действие «Игры престолов» происходит в вымышленном мире, напоминающем средневековую Европу. В сериале одновременно действует множество персонажей и развивается несколько сюжетных линий. Основных сюжетных арок три: первая посвящена борьбе нескольких влиятельных домов за Железный Трон Семи Королевств; вторая — потомку свергнутой династии правителей, принцессе-изгнаннице, планирующей вернуть престол; третья — древнему братству, охраняющему государство от угроз с севера.</p>
                     </div>
-                   
-            </section>
-            </div>
-        </main>
+                </div>
+                
+                
+                    <div class="event">
+                        <div class="product-image">
+                            <img src="images/OCD.jpg" alt="event4">
+                        </div>
+                        <div class="product-details">
+                            <header>Очень странные дела</header>
+                            <p class="information">1980-е годы, тихий провинциальный американский городок. Благоприятное течение местной жизни нарушает загадочное исчезновение подростка по имени Уилл. Выяснить обстоятельства дела полны решимости родные мальчика и местный шериф, также события затрагивают лучшего друга Уилла – Майка. Он начинает собственное расследование. Майк уверен, что близок к разгадке, и теперь ему предстоит оказаться в эпицентре ожесточенной битвы потусторонних сил.
+                            </p>
+                        </div>
+                    </div>
+               
 
-        <footer class="footer">
-            <div class="container">
-                &copy; Барателия Т.А.
+                
+                    <div class="event">
+                    <div class="product-image">
+                        <img src="images/La_Casa_De_Papel.jpg" alt="event4">
+                    </div>
+                    <div class="product-details">
+                        <header>Бумажный дом</header>
+                        <p class="information">«Бума́жный дом» (исп. La casa de papel) — испанский криминально-драматический телесериал об ограблении, созданный Алексом Пиной[2]. Сериал рассказывает о двух давно подготовленных ограблениях во главе с профессором (Альваро Морте), одном на Королевском монетном дворе Испании и одном в Банке Испании, рассказанных с точки зрения одного из грабителей, Токио (Урсула Корберо).</p>
+                    </div>
             </div>
 
-        </footer>
-    </body>
+<div class="event">
+        <div class="product-image">
+          <img src="images/Viking.jpg" alt="event4">
+        </div>
+        <div class="product-details">
+            <header>Викинги</header>
+            <p class="information">Рассказ об отряде викингов Рагнара. Он восстал, чтобы стать королём племён викингов. Норвежская легенда гласит, что он был прямым потомком Одина, бога войны и воинов.</p>
+        </div>
+</div>
+
+
+<div class="event">
+            <div class="product-image">
+                <img src="images/vo_vse_tyajkie.jpg" alt="event4">
+            </div>
+            <div class="product-details">
+                <header>Во все тяжкие</header>
+                <p class="information">Школьный учитель химии Уолтер Уайт узнаёт, что болен раком лёгких. Учитывая сложное финансовое состояние дел семьи, а также перспективы, Уолтер решает заняться изготовлением метамфетамина. Для этого он привлекает своего бывшего ученика Джесси Пинкмана, когда-то исключённого из школы при активном содействии Уайта. Пинкман сам занимался варкой мета, но накануне, в ходе рейда УБН, он лишился подельника и лаборатории.</p>
+            </div>
+</div>
+
+
+<div class="event">
+        <div class="product-image">
+            <img src="images/besstigie.jfif" alt="event4">
+        </div>
+        <div class="product-details">
+            <header>Бесстыжие</header>
+            <p class="information">О взбалмошной многодетной семье Галлагеров и их соседях, которые веселятся, попадают в самые невероятные ситуации и пытаются выжить в этом мире всеми возможными средствами, но при этом как можно меньше работая.</p>
+        </div>
+</div>
+
+
+<div class="event">
+    <div class="product-image">
+        <img src="images/Sverx.jpg" alt="event4">
+    </div>
+    <div class="product-details">
+        <header>Сверхъестественное (сериал 2005 – 2020)</header>
+        <p class="information">Сериал рассказывает о приключениях братьев Сэма и Дина Винчестеров, которые путешествуют по Соединённым Штатам на чёрном автомобиле Chevrolet Impala 1967 года, расследуют паранормальные явления, многие из которых основаны на американских городских легендах и фольклоре, и сражаются с порождениями зла, такими как демоны и призраки.</p>
+    </div>
+</div>
+
+
+<div class="event">
+    <div class="product-image">
+        <img src="images/Peaky_Blinders.jpg" alt="event4">
+    </div>
+    <div class="product-details">
+        <header>Острые козырьки (сериал 2013 – 2022)</header>
+        <p class="information">Британский сериал о криминальном мире Бирмингема 20-х годов прошлого века, в котором многолюдная семья Шелби стала одной из самых жестоких и влиятельных гангстерских банд послевоенного времени. Фирменным знаком группировки, промышлявшей грабежами и азартными играми, стали зашитые в козырьки лезвия.</p>
+    </div>
+</div>
+
+
+<div class="event">
+    <div class="product-image">
+        <img src="images/Pobeg.jpg" alt="event4">
+    </div>
+    <div class="product-details">
+        <header>Побег (сериал 2005 – 2017)</header>
+        <p class="information">Майкл убежден в невиновности брата, осужденного на казнь, и решает сам восстановить справедливость. Он намеренно совершает преступление, за которое попадает в ту самую тюрьму, где сидит брат. Ту самую, которую Майкл хорошо знает, потому что сам же ее и создавал, как инженер-строитель... План спасения гениально прост...</p>
+    </div>
+</div>
+
+
+<div class="event">
+    <div class="product-image">
+        <img src="images/Riverdeil.jfif" alt="event4">
+    </div>
+    <div class="product-details">
+        <header>Ривердейл</header>
+        <p class="information">Сериал расскажет о жизни и приключениях жизнерадостного и никогда не унывающего подростка Арчи Эндрюса, а также Бэтти Купер, Вероники Лодж и их друзей из Ривердэйла. Действие разворачивается в современном мире, а главные герои решают исследовать сокрытую от посторонних сторону жизни маленького мирного городка со всеми его странностями и тёмными тайнами, прячущимися за праздничным фасадом.</p>
+    </div>
+</div>
+
+
+
+        </div>
+                
+    </div>
+        
+    </main>
+    <footer class="footer">
+        <div class="container">
+            &copy; 2023 Сериалы
+        </div>
+    </footer>
+
+</body>
+
 </html>
