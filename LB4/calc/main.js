@@ -135,7 +135,45 @@ function compile(str) {
 // (https://en.wikipedia.org/wiki/Reverse_Polish_notation).
 
 function evaluate(str) {
-    // your code here
+
+    let n = str.length;
+    let stack = [];
+    for (token of tokenize(str))
+    {
+        if (isNumeric(token)) {
+            stack.push(token);
+        }
+        else if (token == '+')
+        {
+            var a = Number(stack.pop());
+            var b = Number(stack.pop());
+            var res = a + b;
+            stack.push(res);
+        }
+        else if (token == '*')
+        {
+            var a = Number(stack.pop());
+            var b = Number(stack.pop());
+            var res = a * b;
+            stack.push(res);
+        }
+        else if (token == '-')
+        {
+            var a = Number(stack.pop());
+            var b = Number(stack.pop());
+            var res = b - a;
+            stack.push(res);
+        }
+        else if (token == '/')
+        {
+            var a = Number(stack.pop());
+            var b = Number(stack.pop());
+            var res = b / a;
+            stack.push(res);
+        }
+    }
+    return stack.pop();
+
 }
 
 // Функция clickHandler предназначена для обработки 
@@ -146,7 +184,7 @@ function evaluate(str) {
 // По нажатию на кнопку с классом clear содержимое экрана 
 // должно очищаться.
 // По нажатию на кнопку с классом result на экране 
-// должен появиться результат вычисления введённого выражения 
+// должен появиться результат вычисления введённогваго выражения 
 // с точностью до двух знаков после десятичного разделителя (точки).
 // Реализуйте эту функцию. Воспользуйтесь механизмом делегирования 
 // событий (https://learn.javascript.ru/event-delegation), чтобы 
@@ -166,7 +204,23 @@ function evaluate(str) {
 // handler for each button separately.
 
 function clickHandler(event) {
-    // your code here
+
+    const buttonValue = event.target.innerText;
+    let screen = document.querySelector('.answer');
+    if (event.target.classList.contains('clear'))
+    {
+        screen.textContent = "";
+    }
+    else if (event.target.classList.contains('result'))
+    {
+        let str = screen.textContent;
+        str.toString();
+        screen.textContent = evaluate(compile(str)).toString();
+
+    }
+    else if (event.target.classList.contains('key')) {
+        screen.textContent += buttonValue;
+      }
 }
 
 
@@ -175,5 +229,9 @@ function clickHandler(event) {
 // Set event handlers.
 
 window.onload = function () {
-    // your code here
+    document.querySelector('.buttons').addEventListener('click', function (event) {
+        clickHandler(event);
+    });
+
+    //evaluate(compile("(1+2)*3 / (4 + 4)"));
 };
