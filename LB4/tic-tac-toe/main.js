@@ -2,6 +2,8 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn = document.querySelector("#restartBtn");
+
+//// Winning combinations
 const winConditions = [
     [0, 1, 2],
     [3, 4, 5],
@@ -12,32 +14,35 @@ const winConditions = [
     [0, 4, 8],
     [2, 4, 6]
 ];
-let options = ["", "", "", "", "", "", "", "", ""];
+
+// Переменные состояния игры
+let options = ["", "", "", "", "", "", "", "", ""]; // Массив для хранения состояний ячеек
 let currentPlayer = "X";
 let running = false;
 
 initializeGame();
 
 function initializeGame(){
-    cells.forEach(cell => cell.addEventListener("click", cellClicked));
-    restartBtn.addEventListener("click", restartGame);
+    cells.forEach(cell => cell.addEventListener("click", cellClicked)); // Добавление обработчиков событий клика для каждой ячейки
+    restartBtn.addEventListener("click", restartGame); // Добавление обработчика события клика для кнопки перезапуска
     statusText.textContent = `${currentPlayer}'s turn`;
     running = true;
 }
 function cellClicked(){
     const cellIndex = this.getAttribute("cellIndex");
 
-    if(options[cellIndex] != "" || !running){
+    if(options[cellIndex] != "" || !running){  // Проверка, выбрана ли уже ячейка, или игра завершена
         return;
     }
 
     updateCell(this, cellIndex);
     checkWinner();
 }
+
 function updateCell(cell, index){
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
-}
+
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
