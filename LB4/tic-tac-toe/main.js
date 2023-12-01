@@ -42,7 +42,8 @@ function cellClicked(){
 function updateCell(cell, index){
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
-
+}
+//Функция смены игрока
 function changePlayer(){
     currentPlayer = (currentPlayer == "X") ? "O" : "X";
     statusText.textContent = `${currentPlayer}'s turn`;
@@ -56,6 +57,7 @@ function checkWinner(){
         const cellB = options[condition[1]];
         const cellC = options[condition[2]];
 
+        // Проверка, чтобы ячейки в условии победы были одинаковыми
         if(cellA == "" || cellB == "" || cellC == ""){
             continue;
         }
@@ -65,6 +67,8 @@ function checkWinner(){
         }
     }
 
+
+// Вывод результата или смена игрока
     if(roundWon){
         statusText.textContent = `${currentPlayer} wins!`;
         running = false;
@@ -81,6 +85,7 @@ function restartGame(){
     currentPlayer = "X";
     options = ["", "", "", "", "", "", "", "", ""];
     statusText.textContent = `${currentPlayer}'s turn`;
+    // Очистка содержимого ячеек
     cells.forEach(cell => cell.textContent = "");
     running = true;
 }

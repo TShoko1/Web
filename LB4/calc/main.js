@@ -81,14 +81,6 @@ function tokenize(str) {
 // Функция реализует алгоритм сортировочной станции 
 // (https://ru.wikipedia.org/wiki/Алгоритм_сортировочной_станции).
 // ----------------------------------------------------------------------------
-// The compile function takes one argument, a string with an arithmetic 
-// expression written in infix notation, and converts this expression to 
-// reverse Polish notation(RPN).The return value is the result of the 
-// conversion as a string with operators and operands separated by 
-// spaces.The expression can include real numbers, +, -, *, / operators, 
-// and brackets. All operators are binary and left associative. 
-// The function implements the Shunting yard algorithm
-// (https://en.wikipedia.org/wiki/Shunting_yard_algorithm).
 
 function compile(str) {
     let out = [];
@@ -189,19 +181,7 @@ function evaluate(str) {
 // Реализуйте эту функцию. Воспользуйтесь механизмом делегирования 
 // событий (https://learn.javascript.ru/event-delegation), чтобы 
 // не назначать обработчик для каждой кнопки в отдельности.
-// ----------------------------------------------------------------------------
-// The clickHandler function is designed to handle click events 
-// on calculator buttons. When buttons with classes "digit", 
-// "operation" and "bracket" are pressed, the symbols corresponding 
-// to the pressed button should appear on the screen 
-// (element with the class "screen"). On clicking the button with 
-// the "clear" class, the contents of the screen should be cleared.
-// By clicking on the button with the "result" class, the result of 
-// the calculation of the entered expression should appear on the screen 
-// with an accuracy of two decimal places after the decimal separator (point). 
-// Implement this function. Use the event delegation mechanism 
-// (https://javascript.info/event-delegation) so as not to set a 
-// handler for each button separately.
+
 
 function clickHandler(event) {
 

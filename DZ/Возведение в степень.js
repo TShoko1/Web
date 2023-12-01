@@ -12,7 +12,7 @@ function pow(x, n) {
   return result;
 }
 
-const x = 2;
-const n = 3;
+const x = 2; //число
+const n = 3; //степень
 const result = pow(x, n);
 console.log(`${x} в степени ${n} равно ${result}`);
