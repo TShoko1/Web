@@ -1,10 +1,6 @@
 // Функция priority позволяет получить 
 // значение приоритета для оператора.
 // Возможные операторы: +, -, *, /.
-// ----------------------------------------------------------------------------
-// The "priority" function allows you to 
-// get the priority of an operator. 
-// Possible operators: +, -, *, /.
 
 function priority(operation) {
     if (operation == '+' || operation == '-') {
@@ -15,24 +11,18 @@ function priority(operation) {
 }
 
 // Проверка, является ли строка str числом.
-// ----------------------------------------------------------------------------
-// Checking if the string "str" contains a number.
 
 function isNumeric(str) {
     return /^\d+(.\d+){0,1}$/.test(str);
 }
 
 // Проверка, является ли строка str цифрой.
-// ----------------------------------------------------------------------------
-// Checking if the string "str" contains a digit.
 
 function isDigit(str) {
     return /^\d{1}$/.test(str);
 }
 
 // Проверка, является ли строка str оператором.
-// ----------------------------------------------------------------------------
-// Checking if the string "str" contains an operator.
 
 function isOperation(str) {
     return /^[\+\-\*\/]{1}$/.test(str);
@@ -42,11 +32,6 @@ function isOperation(str) {
 // с арифметическим выражением и делит его на токены 
 // (числа, операторы, скобки). Возвращаемое значение --
 // массив токенов.
-// ----------------------------------------------------------------------------
-// The "tokenize" function takes one argument, a string 
-// with an arithmetic expression, and divides it into 
-// tokens (numbers, operators, brackets).The return value 
-// is an array of tokens.
 
 function tokenize(str) {
     let tokens = [];
@@ -79,7 +64,7 @@ function tokenize(str) {
 // Выражение может включать действительные числа, операторы 
 // +, -, *, /, а также скобки. Все операторы бинарны и левоассоциативны.
 // Функция реализует алгоритм сортировочной станции 
-// (https://ru.wikipedia.org/wiki/Алгоритм_сортировочной_станции).
+// (https://ru.wikipedia.org/wiki/Алгоритм_сортировочной_станции).                    ()
 // ----------------------------------------------------------------------------
 
 function compile(str) {
@@ -117,14 +102,6 @@ function compile(str) {
 // действительные числа и операторы +, -, *, /.
 // Вам нужно реализовать эту функцию
 // (https://ru.wikipedia.org/wiki/Обратная_польская_запись#Вычисления_на_стеке).
-// ----------------------------------------------------------------------------
-// The evaluate function takes one argument, a string 
-// containing an arithmetic expression written in reverse 
-// Polish notation.The return value is the result of 
-// evaluating the expression.The expression can include 
-// real numbers and the operators +, -, *, /. 
-// You need to implement this function
-// (https://en.wikipedia.org/wiki/Reverse_Polish_notation).
 
 function evaluate(str) {
 
@@ -205,8 +182,7 @@ function clickHandler(event) {
 
 
 // Назначьте нужные обработчики событий.
-// ----------------------------------------------------------------------------
-// Set event handlers.
+
 
 window.onload = function () {
     document.querySelector('.buttons').addEventListener('click', function (event) {

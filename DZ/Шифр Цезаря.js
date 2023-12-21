@@ -1,33 +1,36 @@
 function cesar(str, shift, action) {
-    const alphabet = 'абвгдежзийклмнопрстуфхцчшщъыьэюя';
-    let result = '';
-
-    for (let i = 0; i < str.length; i++) {
-        const char = str[i].toLowerCase();
-        const isUpperCase = str[i] === char.toUpperCase();
-
-        if (alphabet.includes(char)) {
-            const charIndex = alphabet.indexOf(char);
-            let newCharIndex;
-
-            if (action === 'encode') {
-                newCharIndex = (charIndex + shift) % alphabet.length;
-            } else if (action === 'decode') {
-                newCharIndex = (charIndex - shift + alphabet.length) % alphabet.length;
-            } else {
-                throw new Error("Invalid action. Use 'encode' or 'decode'.");
-            }
-
-            const newChar = alphabet[newCharIndex];
-            result += isUpperCase ? newChar.toUpperCase() : newChar;
-        } else {
-            result += str[i];
-        }
+    if (typeof str !== 'string' || typeof shift !== 'number' || (action !== 'encode' && action !== 'decode')) {
+        return "Некорректные входные данные.";
     }
 
-    return result;
+    const russianAlphabet = "абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+    const alphabetLength = russianAlphabet.length;
+
+    const cipher = (char, shift, action) => {
+        const charLower = char.toLowerCase();
+        const isUpperCase = char !== charLower;
+
+        if (russianAlphabet.includes(charLower)) {
+            const index = russianAlphabet.indexOf(charLower);
+            let newIndex;
+
+            if (action === 'encode') {
+                newIndex = (index + shift) % alphabetLength;
+            } else {
+                newIndex = (index - shift + alphabetLength) % alphabetLength;
+            }
+
+            const newChar = russianAlphabet.charAt(newIndex);
+
+            return isUpperCase ? newChar.toUpperCase() : newChar;
+        }
+
+        return char;
+    };
+
+    return str.split('').map(char => cipher(char, shift, action)).join('');
 }
 
-// Пример использования
-const encryptedMessage = cesar("эзтыхз фзъзъз", 3, 'decode');
-console.log(encryptedMessage);  // Результат: "шпривет привет"
+let messageToEncode = "эзтыхз фзъзъз";
+let decodedMessage = cesar(messageToEncode, 8, 'decode');
+console.log(decodedMessage);
